@@ -4,56 +4,56 @@ files:
   visible: true
   placeholders:
   - offset: 183
-    length: 48
+    length: 60
     placeholder_text: '...  # TODO добавить указатель на первый элемент'
     initial_state:
       length: 48
       offset: 183
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: 'self.head: Optional[Node] = None'
-  - offset: 532
-    length: 56
+  - offset: 544
+    length: 83
     placeholder_text: '...  # TODO инициализировать указатель на первый элемент'
     initial_state:
       length: 56
       offset: 532
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: self.head = self.list_nodes[0]
-  - offset: 1346
-    length: 41
+  - offset: 1420
+    length: 108
     placeholder_text: '# TODO проверка правильности типа индекса'
     initial_state:
       length: 41
       offset: 1346
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       if not isinstance(index, int):
                   raise TypeError
-  - offset: 1412
-    length: 41
+  - offset: 1553
+    length: 47
     placeholder_text: '...  # TODO чему равен начальный элемент?'
     initial_state:
       length: 41
       offset: 1412
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: self.head
-  - offset: 1684
-    length: 49
+  - offset: 1831
+    length: 85
     placeholder_text: '...  # TODO метод должен возвращать значение узла'
     initial_state:
       length: 49
       offset: 1684
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       node = self.step_by_step_on_nodes(index)
               return node.value
@@ -160,5 +160,8 @@ files:
             self.is_valid(next_)
             self.next = next_
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Thu, 09 Sep 2021 15:55:27 UTC
 record: -1

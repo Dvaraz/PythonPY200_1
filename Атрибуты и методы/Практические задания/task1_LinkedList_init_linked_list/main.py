@@ -14,10 +14,11 @@ class LinkedList:
         """ Метод, который создает вспомогательный список и связывает в нём узлы. """
         self.list_nodes = [Node(value) for value in data]
 
-        # TODO составьте алгоритм, который свяжет узлы
+        for i in range(len(self.list_nodes) - 1):
+            self.linked_nodes(self.list_nodes[i], self.list_nodes[i+1])
 
-    # TODO каким должен быть этот метод?
-    def linked_nodes(self, left_node: Node, right_node: Optional[Node] = None) -> None:
+    @staticmethod
+    def linked_nodes(left_node: Node, right_node: Optional[Node] = None) -> None:
         """
         Функция, которая связывает между собой два узла.
 

@@ -47,7 +47,7 @@ class LinkedList:
             raise TypeError()
 
         if not 0 <= index < self.len:  # для for
-            raise ...  # TODO подставьте нужную ошибку
+            raise IndexError  # TODO подставьте нужную ошибку
 
         current_node = self.head
         for _ in range(index):
@@ -57,16 +57,16 @@ class LinkedList:
 
     def __getitem__(self, index: int) -> Any:
         """ Метод возвращает значение узла по указанному индексу. """
-        # TODO
+        return self.step_by_step_on_nodes(index)
 
     def to_list(self) -> list:
-        ...  # TODO Метод to_list реализовать через list comprehension.
+        return [i.value for i in linked_list] # TODO Метод to_list реализовать через list comprehension.
 
     def __repr__(self) -> str:
-        ...  # TODO c помощью метода to_list реализовать данный метод
+        return f"LinkedList({self.to_list()})" # TODO c помощью метода to_list реализовать данный метод
 
     def __str__(self) -> str:
-        ...  # TODO c помощью метода to_list реализовать данный метод
+        return f"{self.to_list()}" # TODO c помощью метода to_list реализовать данный метод
 
 
 if __name__ == '__main__':

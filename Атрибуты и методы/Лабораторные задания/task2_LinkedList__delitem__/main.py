@@ -70,13 +70,26 @@ class LinkedList:
             raise TypeError()
 
         if not 0 <= index < self.len:  # для for
-            raise IndexError()
+            raise IndexError("Index out of range")
         # TODO проверка индекса
-
         current_node = self.step_by_step_on_nodes(index)
-        prev_node = self.step_by_step_on_nodes(index-1)
-        next_node = self.step_by_step_on_nodes(index + 1)
-        self.linked_nodes(prev_node, current_node.next)
+
+        if index + 1 != self.len and index != 0:
+            prev_node = self.step_by_step_on_nodes(index - 1)
+            self.linked_nodes(prev_node, current_node.next)
+            self.len -= 1
+        elif index == 0 and self.len == 1:
+            self.len = 0
+        elif index == 0:
+            next_node = self.step_by_step_on_nodes(index + 1)
+            self.head = next_node
+            self.len -= 1
+        else:
+            prev_node = self.step_by_step_on_nodes(index - 1)
+            self.linked_nodes(prev_node, None)
+            self.len -= 1
+
+
 
     def to_list(self) -> list:
         return [linked_list_value for linked_list_value in self]
@@ -96,8 +109,8 @@ if __name__ == '__main__':
     del linked_list[1]
     print(linked_list)
 
-    # del linked_list[1]
-    # print(linked_list)
+    del linked_list[1]
+    print(linked_list)
 
-    # del linked_list[0]
-    # print(linked_list)
+    del linked_list[0]
+    print(linked_list)

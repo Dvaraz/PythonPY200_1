@@ -35,7 +35,7 @@ class Date:
     @staticmethod
     def is_valid_date(day: int, month: int, year: int):
         """Проверяет, является ли дата корректной"""
-        if not isinstance(year, int)or not isinstance(month, int) or not isinstance(day, int):
+        if not isinstance(year, int) or not isinstance(month, int) or not isinstance(day, int):
             raise TypeError
 
 

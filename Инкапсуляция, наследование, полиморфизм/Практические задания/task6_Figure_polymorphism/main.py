@@ -3,14 +3,14 @@ class TriangleCalculator:
     @classmethod
     def area(cls, *args):
         if len(args) == 2:
-            cls.area_height(*args)
+            cls._area_height(*args)
         if len(args) == 3:
-            cls.area_by_angle(*args)
+            cls._area_by_angle(*args)
 
     @staticmethod
-    def area_by_angle(a, b, angle):
+    def _area_by_angle(a, b, angle):
         ...
 
     @staticmethod
-    def area_height(a, h):
+    def _area_height(a, h):
         ...

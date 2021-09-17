@@ -69,9 +69,15 @@ class LinkedList:
     def __str__(self) -> str:
         return f"{self.to_list()}"
 
-    # TODO реализовать getter и setter для head
+    @property
+    def head(self):
+        return self._head
 
-    # TODO реализовать getter и setter для tail
+    @head.setter
+    def head(self, head_: Optional[Node]):
+        if not isinstance(head_, (type(None), Node)):
+            raise TypeError
+        self._head = head_
 
 
 if __name__ == "__main__":
@@ -80,3 +86,4 @@ if __name__ == "__main__":
     ll = LinkedList(list_)
     print(ll.head)
     print(ll.tail)
+    ll.head = 1

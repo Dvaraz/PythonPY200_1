@@ -3,7 +3,7 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 2162
+  - offset: 2547
     length: 23
     placeholder_text: '...  # TODO проверка индекса'
     initial_state:
@@ -18,8 +18,8 @@ files:
 
               if not 0 <= index < self.len:  # для for
                   raise IndexError()
-  - offset: 2185
-    length: 622
+  - offset: 2580
+    length: 219
     placeholder_text: '...  # TODO алгоритм удаления'
     initial_state:
       length: 29
@@ -185,7 +185,7 @@ files:
 status: Failed
 feedback:
   message: Incorrect
-  time: Sun, 12 Sep 2021 15:51:07 UTC
+  time: Thu, 16 Sep 2021 14:46:57 UTC
   expected: |
     [1, 2, 3]
     2

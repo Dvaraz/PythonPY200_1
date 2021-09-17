@@ -61,9 +61,6 @@ class LinkedList:
         if not 0 <= index < self.len:
             raise IndexError()
 
-        # if start != 0:
-        #     self.head = self.step_by_step(start)
-        #     current_start = self.head
         current_node = self.head
 
         for _ in range(index):

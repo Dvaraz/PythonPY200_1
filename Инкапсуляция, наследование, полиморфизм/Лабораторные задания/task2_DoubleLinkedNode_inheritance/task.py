@@ -14,7 +14,7 @@ class Node:
         self.next = next_  # вызовется setter
 
     def __repr__(self) -> str:
-        return f"Node({self.value}, {None})" if self.next is None else f"Node({self.value}, Node({self.next}))"
+        return f"{self.__class__.__name__}({self.__dict__})"
 
     def __str__(self) -> str:
         return str(self.value)
@@ -47,8 +47,13 @@ class DoubleLinkedNode(Node):
 
     @prev.setter
     def prev(self, value: Optional["Node"]):
+        self.is_valid(value)
         self._prev = value
 
-    def __repr__(self) -> str:
-        # return f"DoubleLinkedNode({self.value}, {None})" if self.next is None else f"Node({self.value}, Node({self.next}))"
-        pass # can be dynamic as well as is_valid
+
+double_node = DoubleLinkedNode(1)
+print(double_node.__repr__())
+double_node.next = DoubleLinkedNode(2)
+print(double_node.__repr__())
+double_node.prev = DoubleLinkedNode(1)
+print(double_node.__repr__())

@@ -11,6 +11,15 @@ class LinkedListWithDriver(LinkedList):
         self.driver = driver
 
     # TODO свойство для driver (getter + setter)
+    @property
+    def driver(self):
+        return self._driver
+
+    @driver.setter
+    def driver(self, driver):
+        # if not isinstance(driver, IStructureDriver):
+        #     raise TypeError
+        self._driver = driver
 
     def read(self):
         """ С помощью драйвера считать данные и поместить их в LinkedList. """

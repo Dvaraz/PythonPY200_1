@@ -51,9 +51,11 @@ class DoubleLinkedNode(Node):
         self._prev = value
 
 
-double_node = DoubleLinkedNode(1)
-print(double_node.__repr__())
-double_node.next = DoubleLinkedNode(2)
-print(double_node.__repr__())
-double_node.prev = DoubleLinkedNode(1)
-print(double_node.__repr__())
+if __name__ == '__main__':
+
+    double_node = DoubleLinkedNode(1)
+    print(double_node.__repr__())
+    double_node.next = DoubleLinkedNode(2)
+    print(double_node.__repr__())
+    double_node.prev = DoubleLinkedNode(1)
+    print(double_node.__repr__())

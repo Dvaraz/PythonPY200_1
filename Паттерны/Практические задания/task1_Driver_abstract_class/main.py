@@ -23,11 +23,18 @@ class IStructureDriver(ABC):
 
 
 class SimpleFileDriver(IStructureDriver):
-    ...  # TODO реализовать драйвер работы с текстовым файлом
+    def __init__(self, file_name: str):
+        self.file_name = file_name
 
-    # TODO реализовать метод чтения данных из файла
+    def read(self) -> Iterable:
+        with open(self.file_name) as f:
+            return [int(i.strip()) for i in f]
 
-    # TODO реализовать метод записи в файл построчно
+    def write(self, data: Iterable) -> None:
+        with open(self.file_name, "w") as f:
+            for item in data:
+                f.write(repr(item))
+                f.write("\n")
 
     def __repr__(self):
         return f"{self.__class__.__name__}(\"{self.filename}\")"
@@ -37,6 +44,5 @@ if __name__ == '__main__':
     write_data = [1, 2, 3]
     driver = SimpleFileDriver('tmp.txt')
     driver.write(write_data)
-
     read_data = driver.read()
     print(read_data)

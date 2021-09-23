@@ -4,14 +4,14 @@ files:
   visible: true
   placeholders:
   - offset: 368
-    length: 44
+    length: 273
     placeholder_text: '# TODO свойство для driver (getter + setter)'
     initial_state:
       length: 44
       offset: 368
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       @property
           def driver(self):
@@ -213,7 +213,7 @@ files:
   visible: true
   placeholders:
   - offset: 1172
-    length: 6
+    length: 443
     placeholder_text: '# TODO'
     dependency:
       section: Паттерны
@@ -225,9 +225,9 @@ files:
     initial_state:
       length: 6
       offset: 1172
-    initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    initialized_from_dependency: true
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       class JsonFileDriver(IStructureDriver):
           def __init__(self, json_filename):
@@ -307,7 +307,7 @@ files:
   visible: true
   placeholders:
   - offset: 641
-    length: 1
+    length: 442
     placeholder_text: '#'
     dependency:
       section: Паттерны
@@ -319,9 +319,9 @@ files:
     initial_state:
       length: 1
       offset: 641
-    initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    initialized_from_dependency: true
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       class JsonFileDriverFactoryMethod(DriverFactoryMethod):
           DEFAULT_NAME = 'untitled.json'
@@ -380,6 +380,9 @@ files:
     8
     9
   learner_created: false
-status: Unchecked
+- name: new.json
+  visible: true
+  learner_created: true
+status: Solved
 record: -1
 post_submission_on_open: true

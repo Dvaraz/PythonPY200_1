@@ -78,7 +78,8 @@ class LinkedList:
 
     def __iter__(self) -> Iterator:
         print("Вызван метод \"__iter__\"")
-        # TODO реализовать функцию-генератор по значения списка
+        print(type(self.nodes_iterator()))
+        return self.nodes_iterator()
 
 
 if __name__ == '__main__':

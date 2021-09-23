@@ -88,10 +88,6 @@ class LinkedList:
         self._tail = value
 
 
-linked_list = LinkedList([1, 2, 3, 4, 5])
-print(linked_list.__repr__())
-
-
     # TODO Реализовать класс DoubleLinkedList
 class DoubleLinkedList(LinkedList):
     def __init__(self, data: Iterable = None):
@@ -128,6 +124,12 @@ class DoubleLinkedList(LinkedList):
         center_node.next = right_node
 
 
-double_linked_list = DoubleLinkedList([1, 2, 3])
-print(double_linked_list)
-print(double_linked_list.__dict__)
+if __name__ == '__main__':
+
+    linked_list = LinkedList([1, 2, 3, 4, 5])
+    print(linked_list.__repr__())
+    double_linked_list = DoubleLinkedList([1, 2, 3])
+    print(double_linked_list)
+    print(double_linked_list.__repr__())
+    print(type(double_linked_list.head))
+    print(type(double_linked_list.tail))

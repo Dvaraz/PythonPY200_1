@@ -4,74 +4,74 @@ files:
   visible: true
   placeholders:
   - offset: 181
-    length: 42
+    length: 49
     placeholder_text: '...):  # TODO наследовать класс LinkedList'
     initial_state:
       length: 42
       offset: 181
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: 'LinkedList):'
-  - offset: 312
-    length: 68
+  - offset: 319
+    length: 51
     placeholder_text: '...  # TODO расширяем конструктор, чтобы в связном списке был
       driver'
     initial_state:
       length: 68
       offset: 312
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       super().__init__(data)
               self.driver = driver
-  - offset: 489
-    length: 38
+  - offset: 479
+    length: 103
     placeholder_text: '...  # TODO считать данные из драйвера'
     initial_state:
       length: 38
       offset: 489
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       data_from_driver = self.driver.read()
 
               self.clear()
               for value in data_from_driver:
                   self.append(value)
-  - offset: 624
-    length: 46
+  - offset: 675
+    length: 27
     placeholder_text: '...  # TODO записать данные с помощью драйвера'
     initial_state:
       length: 46
       offset: 624
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: self.driver.write(self)
-  - offset: 751
-    length: 49
+  - offset: 783
+    length: 89
     placeholder_text: '# TODO инициализировать драйвер и записать данные'
     initial_state:
       length: 49
       offset: 751
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       ll.driver = SimpleFileFactoryMethod.get_driver()
           ll.write()
-  - offset: 806
-    length: 40
+  - offset: 878
+    length: 86
     placeholder_text: '# TODO заменить драйвер и считать данные'
     initial_state:
       length: 40
       offset: 806
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: |-
       ll.driver = SimpleFileFactoryMethod.get_driver()
           ll.read()
@@ -340,28 +340,12 @@ files:
         driver = SimpleFileFactoryMethod.get_driver()
         print(driver)
   learner_created: false
-- name: input.txt
-  visible: true
-  text: |
-    1
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9
-  learner_created: false
 - name: untitled.txt
   visible: true
-  text: |
-    1
-    2
-    3
-    4
-    5
-  learner_created: false
-status: Unchecked
+  learner_created: true
+- name: input.txt
+  visible: true
+  learner_created: true
+status: Solved
 record: -1
 post_submission_on_open: true

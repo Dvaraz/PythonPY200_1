@@ -3,7 +3,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 897
+  - offset: 948
     length: 41
     placeholder_text: '# TODO реализовать класс DoubleLinkedNode'
     initial_state:
@@ -11,7 +11,7 @@ files:
       offset: 948
     initialized_from_dependency: false
     selected: false
-    status: Solved
+    status: Unchecked
     encrypted_possible_answer: '# TODO'
   text: |
     from typing import Any, Optional
@@ -67,8 +67,5 @@ files:
 - name: tests/__init__.py
   visible: false
   learner_created: false
-status: Solved
-feedback:
-  message: Congratulations!
-  time: Sun, 19 Sep 2021 12:16:37 UTC
+status: Unchecked
 record: -1

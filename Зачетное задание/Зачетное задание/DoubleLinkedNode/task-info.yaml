@@ -35,5 +35,8 @@ files:
 - name: tests/__init__.py
   visible: false
   learner_created: false
+- name: test_task.py
+  visible: true
+  learner_created: true
 status: Unchecked
-record: -1
+record: 1
